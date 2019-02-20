@@ -83,10 +83,32 @@ body {
 	text-align: center;
 	padding-bottom: 10px;
 }
+/* Activity styling below
+*/
 
-.activity_feed {
-	font-size: 13px;
+.activity-wrapper{
+	width: 100%;
+	height: 20%;
+}
+
+.activity-info{
+	width: 50%;
+	font-size: 80%;
 	text-align: left;
-	padding-top: 0px;
-	padding-left: 20px;
+	float: left;
+}
+.activity-info ul{
+	padding: 0%;
+	margin: 0%;
+}
+
+.activity-image{
+	width:50%;
+	float: right;
+	text-align: right;
+}
+
+.activity-image img{
+	height: 100%;
+	width: auto;
 }
