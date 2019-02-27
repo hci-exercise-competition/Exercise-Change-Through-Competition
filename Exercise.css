@@ -17,7 +17,7 @@ body {
   text-align: center;
   color: black;
   height: 35px;
-  background-color: #509381;
+  background-color: #dc6938;
 }
 
 hr {
@@ -31,7 +31,7 @@ hr {
 .button {
 	height: 25px;
     width: 95px;
-  	background-color: #509381;
+  	background-color: #dc6938;
   	font-size: 14px;
     border: none;
     color: white;
@@ -127,10 +127,10 @@ hr {
 
 .activity-wrapper{
 	width: 100%;
-	height: 20%;
-	margin-top: 10px;
+	height: 18%;
+	margin-top: 6px;
 	margin-left: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 6px;
 }
 
 .activity-info{
@@ -140,13 +140,13 @@ hr {
 	text-align: left;
 	float: left;
 	padding-left: 10px;
-	padding-top: 5px;
+	padding-top: 0px;
 }
 
 .activity-info ul{
 	padding: 0%;
 	margin: 0%;
-	padding-top: 7px; /* Note: Positions for 4 lines only */
+	padding-top: 2px; /* Note: Positions for 4 lines only */
 	/* vertical-align: middle; */ /* Note: Does not work?? */
 }
 
@@ -159,7 +159,7 @@ hr {
 }
 
 .activity-image img{
-	height: 90%;
+	height: 100%;
 	width: auto;
 }
 
