@@ -260,7 +260,7 @@ hr {
 }
 
 /* ******************************************************************* */
-/* Goals1 section */
+/* Goals-Making section */
 
 .goals-making-wrapper{
 	width: 100%;
@@ -330,6 +330,7 @@ hr {
 	text-shadow: 2px 2px #000000;
 }
 
+/* Still in Goals Making */
 /* Dropdown & Forms below */
 .gen-text-help{
   text-align: center;
@@ -400,17 +401,3 @@ input::placeholder{
 input:hover {
 	background-color: #6c6c6c;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Form Styling Below */

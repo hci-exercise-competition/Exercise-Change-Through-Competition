@@ -2,11 +2,12 @@
 
 <head>
   <title>Create your own goal</title>
-  <link rel="stylesheet" type="text/css" href="Exercise.css" />
+  <link rel="stylesheet" type="text/css" href="Exercise-Styling.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+  <script src="Exercise-Functions.js"></script>
   <div id="screen">
 
     <!-- TOP BAR -->
@@ -30,13 +31,13 @@
 
     <!-- TYPE -->
     <div class="dropdown">
-      <button class="dropbtn">Goal Type</button>
+      <button id="goals_type" class="dropbtn">Goal Type</button>
       <div class="dropdown-content">
-        <a href="#">Cycling</a>
-        <a href="#">Running</a>
-        <a href="#">Weight Lifting</a>
-        <a href="#">Swimming</a>
-        <a href="#">Frequency</a>
+        <a href="#" id="Cycling" onclick="goaltype_pick(this.id)">Cycling</a>
+        <a href="#" id="Running" onclick="goaltype_pick(this.id)">Running</a>
+        <a href="#" id="Weight Lifting" onclick="goaltype_pick(this.id)">Weight Lifting</a>
+        <a href="#" id="Swimming" onclick="goaltype_pick(this.id)">Swimming</a>
+        <a href="#" id="Frequency" onclick="goaltype_pick(this.id)">Frequency</a>
       </div>
     </div>
 
@@ -56,13 +57,13 @@
     <div class="inline">
       <!-- UNITS -->
       <div class="dropdown" style="margin-left: 32px">
-        <button class="dropbtn" style="width:82px">Units</button>
+        <button id="goals_unit" class="dropbtn" style="width:82px">Units</button>
         <div class="dropdown-content" style="min-width: 82px">
-          <a href="#">lbs</a>
-          <a href="#">mi</a>
-          <a href="#">ft</a>
-          <a href="#">min</a>
-          <a href="#">hr</a>
+          <a href="#" id="lbs" onclick="goalunit_pick(this.id)">lbs</a>
+          <a href="#" id="mi" onclick="goalunit_pick(this.id)">mi</a>
+          <a href="#" id="ft" onclick="goalunit_pick(this.id)">ft</a>
+          <a href="#" id="min" onclick="goalunit_pick(this.id)">min</a>
+          <a href="#" id="hr" onclick="goalunit_pick(this.id)">hr</a>
         </div>
       </div>
     </div>
