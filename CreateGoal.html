@@ -20,12 +20,11 @@
               </div>
             <div class="form-parent-wrapper">
             <div class="form-wrapper">
-            <form>
-              <!-- <select name="goal-type">
-                <option value="cycle">Cycling</option>
-                <option value="lift">Lifting</option> -->
+
+            <form id="myForm" action="MyGoals.html" onsubmit="return storeValues(this);" method="POST">
+
                 <div class="form-styler">
-                <input list="goal-type" type="text" placeholder="Goal Type">
+                <input list="goal-type" type="text" placeholder="Goal Type" name="goalType">
                 <datalist id="goal-type">
                   <option value="Cycling">
                   <option value="Running">
@@ -34,20 +33,20 @@
                   <option value="Frequency">
                 </datalist>
 
-                <input type="text" placeholder="Goal Metric">
-                <select name="units" id="units">
+                <input type="text" placeholder="Goal Metric" name="goalMetric">
+                <select name="units" id="units" name="goalUnit">
                   <option value="lbs">lbs</option>
                   <option value="m">m</option>
                   <option value="ft">ft</option>
                   <option value="minutes">minutes</option>
                   <option value="hours">hours</option>
-                <input type="text" placeholder="Due Date">
+                <input type="text" placeholder="Due Date" name="goalDueDate">
                 </div>
-                <input type="submit" value="Create Goal" id="form-submit">
+                <input type="submit" action="MyGoals.html" value="Create Goal" id="form-submit">
             </form>
             </div>
             </div>
-
+      <script src="scripts/GoalTransfer.js"></script>
    </body>
 </html>
 <!--
