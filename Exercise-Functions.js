@@ -1,7 +1,7 @@
 // GLOBAL VARIABLES:
 
-DistList = ["mi", "km"]
-LiftList = ["lbs", "kg"]
+DistList = ["mi", "km", "min", "hr"]
+LiftList = ["lbs", "kg", "min", "hr"]
 TimeList = ["min", "hr"]
 
 // FUNCTIONS:
@@ -9,6 +9,7 @@ TimeList = ["min", "hr"]
 
 function goaltype_pick(clicked_id) {
     document.getElementById("goals_type").innerHTML = clicked_id;
+    document.getElementById("goals_unit").innerHTML = "Units";
 }
 
 function goalunit_pick(clicked_metric_unit) {
