@@ -56,14 +56,16 @@ hr {
   height: 45px;
   margin-bottom: 0px;
 	margin-top: 1px;
-	padding-top: 4px;
+	padding-top: 5px;
 	/* margin-bottom: 10px; */
 	text-shadow: 2.2px 2.2px #000000;
 }
 
 .profile-img {
   width: 150px;
-  margin: 0px;
+	margin: 0px;
+	padding-left: 2px;
+	padding-top: 2px;
 }
 
 .profile-info {
@@ -111,15 +113,17 @@ hr {
   font-size: 25px;
 	font-weight: bold;
 	text-align: center;
-	padding-bottom: 10px;
+	padding-bottom: 13px;
+	/* color: #dc6938;
+	text-shadow: 1.1px 1.1px #000000; */
 }
 
 /* ******************************************************************* */
 /* Activity styling below */
 
-.persons-feed {
+.scrollable {
 	margin-top: 0px;
-	height: 435px;
+	height: 445px;
 	width: 300px;
 	overflow: scroll;
 	/* background-color: #ffdfd1; */
