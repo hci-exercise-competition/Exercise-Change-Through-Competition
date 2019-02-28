@@ -46,7 +46,9 @@ hr {
     padding-top: 10px;
 }
 
-.button:hover {background: #eee;}
+.button:hover {
+	background: #eee;
+}
 
 .header h1 {
   text-align: center;
@@ -310,7 +312,7 @@ hr {
 
 .button-goal3 {
   border-radius: 10px;
-  background-color: #686868;
+  background-color: #555555;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -319,60 +321,96 @@ hr {
   width: 70%;
   transition: all 0.4s;
 	cursor: pointer;
-	margin-top: 30px;
+	/* margin-top: 30px; */
 }
 
 .button-goal3:hover {
-  background-color: #d2d2d2;
-  color: rgb(60, 60, 60);
+  background-color: #e3703f;
+	/* color: rgb(60, 60, 60); */
+	text-shadow: 2px 2px #000000;
 }
 
-/* keyboard_backspace */
-
-/* Form Styling Below */
-
+/* Dropdown & Forms below */
 .gen-text-help{
   text-align: center;
-  margin:10%;
+	margin:10%;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
-.form-parent-wrapper{
-  align-content: center;
+.inline {
+	display: inline-block;
 }
 
-.form-wrapper{
-  height: 50%;
-  width: 80%;
-  text-align: left;
-  margin-left: 22%;
+.dropdown {
+  position: relative;
+	display: inline-block;
+	margin-left: 25%;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
-.form-styler{
-  height: 90%;
-  width: 100%;
-  font-size: 150%;
+.dropbtn {
+  background-color: #919191;
+  color: white;
+	padding: 10px;
+	width: 150px;
+  font-size: 20px;
+	border: none;
+	border-radius: 7px;
 }
-.form-styler input{
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  box-shadow: 5px 5px 10px 0px #828282;
+	z-index: 1; /* Not sure why this is needed */
+	text-align: center;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown:hover .dropbtn {
+	background-color: #6c6c6c;
+}
+.form2-styler input{
+	font-size: 20px;
   text-align: center;
-  height:25%;
-  width:70%;
-  margin-top:4%;
-  border: 2px solid;
-  border-radius: 5%;
+  height:43px;
+  width:150px;
+  border: 0px solid #ffffff;
+	border-radius: 7px;
+	background-color: #919191;
+	margin-bottom: 1px;
+	color: #ffffff;
 }
-#units{
-  text-align: center;
-  height:22%;
-  width:15%;
+input::placeholder{
+	font-size: 20px; /* WHY IS THIS NOT WORKING??? -ik */
+	color:#ffffff;
 }
-#form-submit{
-  text-align: center;
-  height:20%;
-  width:50%;
-  margin-left: 10%;
-
+input:hover {
+	background-color: #6c6c6c;
 }
 
-input,
-input::-webkit-input-placeholder {
-    font-size: 80%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Form Styling Below */
