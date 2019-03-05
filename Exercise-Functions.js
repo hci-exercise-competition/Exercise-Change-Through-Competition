@@ -20,8 +20,13 @@ function goaltype_pick(id) {
     // change name
     document.getElementById("goals_type").innerHTML =
         document.getElementById(id).innerHTML;
+    // not yet
+    // document.getElementById("goals_metric").placeholder = "Enter: Metric";
     // reset units
     document.getElementById("goals_unit").innerHTML = "Units";
+    // if (document.getElementById("goals_unit2").classList.display == "block") {
+    //     document.getElementById("goals_unit2").classList.toggle("show");
+    // }
     // reset dates ** not necessary **
     // document.getElementById("goals_dueM").innerHTML = "MM";
     // document.getElementById("goals_dueD").innerHTML = "DD";
@@ -168,7 +173,7 @@ function dateY_pick(id) {
 // SET GOAL
 function setGoal() {
     if (document.getElementById("goals_type").innerHTML != "Goal Type" &&
-        document.getElementById("goal_metric").placeholder != "Goal Metric" &&
+        document.getElementById("goals_metric").placeholder != "Goal Metric" &&
         document.getElementById("goals_unit").innerHTML != "Units" &&
         document.getElementById("goals_dueM").innerHTML != "MM" &&
         document.getElementById("goals_dueD").innerHTML != "DD" &&
