@@ -48,6 +48,7 @@ hr {
 
 .button:hover {
 	background: #eee;
+	color: #555555;
 }
 
 .header h1 {
@@ -231,7 +232,7 @@ hr {
 }
 
 .time-bar>div {
-	background-color: #3396c1;
+	background-color: #44a8d3;
 	/* width: 50%; */
 	height: 15px;
 	border-radius: 13px;
@@ -250,7 +251,7 @@ hr {
 }
 
 .progress-bar>div {
-	background-color: #b83223;
+	background-color: #318e2c;
 	/* width: 50%; */
 	height: 15px;
 	border-radius: 13px;
@@ -343,46 +344,50 @@ hr {
 	display: inline-block;
 }
 
-.dropdown {
-  position: relative;
-	display: inline-block;
-	margin-left: 25%;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
 .dropbtn {
   background-color: #919191;
   color: white;
 	padding: 10px;
-	width: 150px;
+	width: 236.4px;
   font-size: 20px;
 	border: none;
 	border-radius: 7px;
+	cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #6c6c6c;
+}
+.dropdown {
+  position: relative;
+	display: inline-block;
+	margin-left: 31.8px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 150px;
+  min-width: 236.4px;
   box-shadow: 5px 5px 10px 0px #828282;
-	z-index: 1; /* Not sure why this is needed */
+	z-index: 1; /* places .dropdown-content at the FRONT */
 	text-align: center;
+	overflow: auto;
 }
 .dropdown-content a {
   color: black;
-  padding: 12px 12px;
+  padding: 8px 12px;
   text-decoration: none;
   display: block;
 }
 .dropdown-content a:hover {
 	background-color: #ddd;
 }
-.dropdown:hover .dropdown-content {
+.show {
 	display: block;
 }
-.dropdown:hover .dropbtn {
-	background-color: #6c6c6c;
-}
+
+
 .form2-styler input{
 	font-size: 20px;
   text-align: center;
