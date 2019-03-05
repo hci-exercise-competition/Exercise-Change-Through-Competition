@@ -346,7 +346,7 @@ hr {
 .dropdown {
   position: relative;
 	display: inline-block;
-	margin-left: 25%;
+	margin-left: 10%;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
@@ -427,4 +427,24 @@ input:hover {
 	text-align: left;
 	font-size: 15px;
 	padding-top: 10.5px;
+}
+
+.competitions-dropbtn {
+  background-color: #919191;
+  color: white;
+	padding: 10px;
+	width: 200px;
+  font-size: 20px;
+	border: none;
+	border-radius: 7px;
+}
+
+
+.competitions-done-wrapper{
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  text-align: center;
 }

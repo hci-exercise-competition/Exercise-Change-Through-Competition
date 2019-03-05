@@ -12,7 +12,7 @@
 
     <!-- TOP BAR -->
     <div class="header">
-      <h1>New Goal</h1>
+      <h1>New Competition</h1>
     </div>
 
     <!-- MENU BUTTONS -->
@@ -20,18 +20,16 @@
       <a class="button" href="Goals.html">My Goals</a>
       <a class="button" href="Profile_User.html">My Profile</a>
       <a class="button" href="Competitions.html">Competitions</a>
-      <!-- <button class="button"></button> -->
-      <!-- <button class="button"></button> -->
     </div>
 
     <!-- TITLE? -->
     <div class="gen-text-help">
-      <h1 style="font-size: 27px">Let's Set Your Goal!</h1>
+      <h1 style="font-size: 27px">Start a competition</h1>
     </div>
 
     <!-- TYPE -->
     <div class="dropdown">
-      <button id="goals_type" class="dropbtn">Goal Type</button>
+      <button id="goals_type" class="competitions-dropbtn">Competition Type</button>
       <div class="dropdown-content">
         <a href="#" id="Cycling" onclick="goaltype_pick(this.id)">Cycling</a>
         <a href="#" id="Running" onclick="goaltype_pick(this.id)">Running</a>
@@ -48,12 +46,13 @@
           <div class="dropbtn" style="padding:0%">
             <div class="form2-styler">
               <!-- FONT SIZE IS OFF BUT DON'T KNOW WHY -ik -->
-              <input type="text" placeholder="Goal Metric">
+              <input type="text" placeholder="Metric">
             </div>
           </div>
         </div>
       </form>
     </div>
+
     <div class="inline">
       <!-- UNITS -->
       <div class="dropdown" style="margin-left: 32px">
@@ -81,17 +80,26 @@
       </div>
     </form>
 
+    <!-- COMPETITION WITH -->
+    <form style="margin-bottom:0px">
+      <div class="dropdown">
+        <div class="dropbtn" style="padding:0%">
+          <div class="form2-styler">
+            <!-- FONT SIZE IS OFF BUT DON'T KNOW WHY -ik -->
+            <input type="text" placeholder="with">
+          </div>
+        </div>
+      </div>
+    </form>
+
     <br>
     <br>
 
-    <!-- SET GOAL! -->
-    <div class="goals-making-wrapper">
-      <a href="Goals.html">
-        <button class="button-goal3"><span>Set Goal!</span></button></a>
+    <!-- SET COMPETITION! -->
+    <div class="competitions-done-wrapper">
+      <a href="Competitions.html">
+        <button class="button-goal3"><span>Done!</span></button></a>
     </div>
 </body>
 
 </html>
-<!--
-* bg iphone img is 363x762px
-* iphone 'screen' is apprx 300x530 -->
