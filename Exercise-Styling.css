@@ -401,3 +401,30 @@ input::placeholder{
 input:hover {
 	background-color: #6c6c6c;
 }
+
+/* ******************************************************************* */
+/* Competitions section */
+
+.competitions-wrapper{
+	width: 100%;
+	height: 35%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.competitions-info{
+	font-size: 80%;
+	width: 280px;
+	margin-right: 0px;
+  padding-top: 20px;
+	padding-right: 0px;
+}
+
+.competitions-info ul{
+	padding: 0%;
+	margin: 0%;
+	width: 100%;
+	text-align: left;
+	font-size: 15px;
+	padding-top: 10.5px;
+}
