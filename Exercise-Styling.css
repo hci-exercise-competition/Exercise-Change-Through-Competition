@@ -251,7 +251,7 @@ hr {
 }
 
 .progress-bar>div {
-	background-color: #318e2c;
+	background-color: #dc6938;
 	/* width: 50%; */
 	height: 15px;
 	border-radius: 13px;
@@ -344,6 +344,13 @@ hr {
 	display: inline-block;
 }
 
+.dropdown {
+  position: relative;
+	display: inline-block;
+	margin-left: 31.8px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 .dropbtn {
   background-color: #919191;
   color: white;
@@ -405,4 +412,51 @@ input::placeholder{
 }
 input:hover {
 	background-color: #6c6c6c;
+}
+
+/* ******************************************************************* */
+/* Competitions section */
+
+.competitions-wrapper{
+	width: 100%;
+	height: 35%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.competitions-info{
+	font-size: 80%;
+	width: 280px;
+	margin-right: 0px;
+  padding-top: 20px;
+	padding-right: 0px;
+}
+
+.competitions-info ul{
+	padding: 0%;
+	margin: 0%;
+	width: 100%;
+	text-align: left;
+	font-size: 15px;
+	padding-top: 10.5px;
+}
+
+.competitions-dropbtn {
+  background-color: #919191;
+  color: white;
+	padding: 10px;
+	width: 200px;
+  font-size: 20px;
+	border: none;
+	border-radius: 7px;
+}
+
+
+.competitions-done-wrapper{
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  text-align: center;
 }
