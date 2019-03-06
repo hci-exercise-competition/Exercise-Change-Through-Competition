@@ -3,96 +3,20 @@
 DistList = ["mi", "km", "min", "hr"]
 LiftList = ["lbs", "kg", "min", "hr"]
 TimeList = ["min", "hr"]
-TYPE_TOGGLE = false
-UNIT_TOGGLE = false
-MM_TOGGLE = false
-DD_TOGGLE = false
-YY_TOGGLE = false
 
 // FUNCTIONS:
 // Goals_Create.html requires text substitution
 
-// SHOW/HIDE Lists when the fields are clicked
-function toggle_drops(id) {
-    // If Type is selected, toggle it, otherwise hide it
-    if (id == "goals_type"){
-        if (TYPE_TOGGLE == false) {
-            document.getElementById("goals_type2").classList.toggle("show");
-            TYPE_TOGGLE = true
-        } else {
-            document.getElementById("goals_type2").classList.toggle("show");
-            TYPE_TOGGLE = false
-        }
-    } else{
-        if (TYPE_TOGGLE == true){
-            document.getElementById("goals_type2").classList.toggle("show");
-            TYPE_TOGGLE = false
-        }
-    }
-    // If Unit is selected, toggle it, otherwise hide it
-    if (id == "goals_unit"){
-        if (UNIT_TOGGLE == false) {
-            document.getElementById("goals_unit2").classList.toggle("show");
-            UNIT_TOGGLE = true
-        } else {
-            document.getElementById("goals_unit2").classList.toggle("show");
-            UNIT_TOGGLE = false
-        }
-    } else{
-        if (UNIT_TOGGLE == true){
-            document.getElementById("goals_unit2").classList.toggle("show");
-            UNIT_TOGGLE = false
-        }
-    }
-    // If Month is selected, toggle it, otherwise hide it
-    if (id == "goals_dueM"){
-        if (MM_TOGGLE == false) {
-            document.getElementById("goals_dueM2").classList.toggle("show");
-            MM_TOGGLE = true
-        } else {
-            document.getElementById("goals_dueM2").classList.toggle("show");
-            MM_TOGGLE = false
-        }
-    } else{
-        if (MM_TOGGLE == true){
-            document.getElementById("goals_dueM2").classList.toggle("show");
-            MM_TOGGLE = false
-        }
-    }
-    // If Day is selected, toggle it, otherwise hide it
-    if (id == "goals_dueD"){
-        if (DD_TOGGLE == false) {
-            document.getElementById("goals_dueD2").classList.toggle("show");
-            DD_TOGGLE = true
-        } else {
-            document.getElementById("goals_dueD2").classList.toggle("show");
-            DD_TOGGLE = false
-        }
-    } else{
-        if (DD_TOGGLE == true){
-            document.getElementById("goals_dueD2").classList.toggle("show");
-            DD_TOGGLE = false
-        }
-    }
-    // If Year is selected, toggle it, otherwise hide it
-    if (id == "goals_dueY"){
-        if (YY_TOGGLE == false) {
-            document.getElementById("goals_dueY2").classList.toggle("show");
-            YY_TOGGLE = true
-        } else {
-            document.getElementById("goals_dueY2").classList.toggle("show");
-            YY_TOGGLE = false
-        }
-    } else{
-        if (YY_TOGGLE == true){
-            document.getElementById("goals_dueY2").classList.toggle("show");
-            YY_TOGGLE = false
-        }
-    }
+// SHOW/HIDE GOAL TYPES LIST
+function butt_drop_type() {
+    // show/hide list
+    document.getElementById("goals_type2").classList.toggle("show");
 }
 
 // GOAL TYPES
 function goaltype_pick(id) {
+    // show/hide list
+    document.getElementById("goals_type2").classList.toggle("show");
     // change name
     document.getElementById("goals_type").innerHTML =
         document.getElementById(id).innerHTML;
@@ -117,6 +41,8 @@ function empty_field(id) {
 
 // GOAL UNITS FIRST CLICK
 function butt_drop_units(id) {
+    // show/hide list
+    document.getElementById(id + String(2)).classList.toggle("show");
 
     if (document.getElementById("goals_type").innerHTML == "Cycling") {
         // change color of other units
@@ -208,6 +134,10 @@ function goalunit_pick(id) {
 }
 
 // MONTH
+function butt_dateM(id) {
+    // show/hide list
+    document.getElementById(id + String(2)).classList.toggle("show");
+}
 function dateM_pick(id) {
     // change name to id
     document.getElementById("goals_dueM").innerHTML =
@@ -216,6 +146,10 @@ function dateM_pick(id) {
 }
 
 // DATE
+function butt_dateD(id) {
+    // show/hide list
+    document.getElementById(id + String(2)).classList.toggle("show");
+}
 function dateD_pick(id) {
     // change name to id
     document.getElementById("goals_dueD").innerHTML =
@@ -224,6 +158,10 @@ function dateD_pick(id) {
 }
 
 // YEAR
+function butt_dateY(id) {
+    // show/hide list
+    document.getElementById(id + String(2)).classList.toggle("show");
+}
 function dateY_pick(id) {
     // change name to id
     document.getElementById("goals_dueY").innerHTML =
