@@ -26,7 +26,7 @@
 
     <!-- TITLE? -->
     <div class="gen-text-help">
-      <h1 style="font-size: 27px">Let's Set Your Goal!</h1>
+      <h1 style="font-size:27px; margin-top:50px; margin-bottom:30px">Let's Set Your Goal!</h1>
     </div>
 
     <!-- TYPE -->
@@ -45,10 +45,10 @@
       <!-- METRIC -->
       <form style="margin-bottom:0px">
         <div class="dropdown">
-          <div class="dropbtn" style="padding:0%;width:150px">
+          <div class="dropbtn" style="padding:0%; width:156.165px">
             <div class="form2-styler">
               <!-- FONT SIZE IS OFF BUT DON'T KNOW WHY -ik -->
-              <input id="goals_metric" type="text" placeholder="Goal Metric" onclick="empty_field(this.id)">
+              <input id="goals_metric" type="text" placeholder="Enter Metric" onclick="empty_field(this.id)" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
             </div>
           </div>
         </div>
@@ -57,8 +57,8 @@
     <div class="inline">
       <!-- UNITS -->
       <div class="dropdown" style="margin-left: 0px">
-        <button id="goals_unit" class="dropbtn" style="width:82px;" onclick="butt_drop_units(this.id)">Units</button>
-        <div id="goals_unit2" class="dropdown-content" style="min-width: 82px">
+        <button id="goals_unit" class="dropbtn" style="width:75.93px;" onclick="butt_drop_units(this.id)">Units</button>
+        <div id="goals_unit2" class="dropdown-content" style="min-width: 75.93px">
           <a href="#" id="lbs" onclick="goalunit_pick(this.id)">lbs</a>
           <a href="#" id="kg" onclick="goalunit_pick(this.id)">kg</a>
           <a href="#" id="mi" onclick="goalunit_pick(this.id)">mi</a>
@@ -145,7 +145,7 @@
 
     <!-- SET GOAL! -->
     <div class="goals-making-wrapper">
-      <a id="test" href="#">
+      <a id="test" href="Goals.html">
         <button class="button-goal3" onclick="setGoal()"><span>Set Goal!</span></button></a>
     </div>
 </body>

@@ -131,6 +131,12 @@ hr {
 	overflow: scroll;
 	/* background-color: #ffdfd1; */
 }
+.scrollable_T {
+	height: 115px;
+	width: 108px;
+	overflow: scroll;
+	/* background-color: #ffdfd1; */
+}
 
 .activity-wrapper{
 	width: 100%;
@@ -261,11 +267,11 @@ hr {
 }
 
 /* ******************************************************************* */
-/* Goals-Making section */
+/* Goals/Competition-Making section */
 
 .goals-making-wrapper{
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-bottom: 15px;
@@ -319,9 +325,10 @@ hr {
   text-align: center;
   font-size: 30px;
   padding: 8px;
-  width: 70%;
+  width: 60%;
   transition: all 0.4s;
 	cursor: pointer;
+	outline: none;
 	/* margin-top: 30px; */
 }
 
@@ -333,11 +340,20 @@ hr {
 
 /* Still in Goals Making */
 /* Dropdown & Forms below */
-.gen-text-help{
+.gen-text-help {
   text-align: center;
 	margin:10%;
 	margin-left: 0px;
 	margin-right: 0px;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+.some-info {
+	text-align: center;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 1px;
+	font-weight: bold;
 }
 
 .inline {
@@ -350,6 +366,7 @@ hr {
 	margin-left: 31.8px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	outline: none;
 }
 .dropbtn {
   background-color: #919191;
@@ -360,6 +377,7 @@ hr {
 	border: none;
 	border-radius: 7px;
 	cursor: pointer;
+	outline: none;
 }
 .dropbtn:hover, .dropbtn:focus {
 	background-color: #6c6c6c;
@@ -394,17 +412,17 @@ hr {
 	display: block;
 }
 
-
 .form2-styler input{
 	font-size: 20px;
   text-align: center;
   height:43px;
-  width:150px;
+  width:156.165; /* THIS NUMBER MUST MATCH WIDTH FOR <!-- METRIC --> */
   border: 0px solid #ffffff;
 	border-radius: 7px;
 	background-color: #919191;
 	margin-bottom: 1px;
 	color: #ffffff;
+	outline: none;
 }
 input::placeholder{
 	font-size: 20px; /* WHY IS THIS NOT WORKING??? -ik */
@@ -412,6 +430,19 @@ input::placeholder{
 }
 input:hover {
 	background-color: #6c6c6c;
+}
+
+.form3-styler input{
+	font-size: 20px;
+  text-align: center;
+  height:43px;
+  width:236.4px; /* THIS NUMBER MUST MATCH WIDTH FOR <!-- METRIC --> */
+  border: 0px solid #ffffff;
+	border-radius: 7px;
+	background-color: #919191;
+	margin-bottom: 1px;
+	color: #ffffff;
+	outline: none;
 }
 
 /* ******************************************************************* */
