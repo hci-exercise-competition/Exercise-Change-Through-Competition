@@ -26,12 +26,16 @@ Days1_31 = [
     "26", "27", "28", "29", "30", "31"]
 Days28_ = ["29", "30", "31"]
 Days30_ = ["31"]
+<<<<<<< HEAD
 var dropdowns = document.getElementsByClassName("dropdown-content");
+=======
+>>>>>>> ik-proto2
 
 // SHOW/HIDE GOAL TYPES LIST
 function butt_drop_type() {
     // show/hide list
     document.getElementById("goals_type2").classList.toggle("show");
+<<<<<<< HEAD
     // reset Enter Metric if empty
     if (document.getElementById("goals_metric").placeholder == "") {
         document.getElementById("goals_metric").placeholder = "Enter Metric";
@@ -42,6 +46,11 @@ function butt_drop_type() {
         if (openDropdown.classList.contains('show') && openDropdown.id != "goals_type2") {
             openDropdown.classList.remove('show');
         }
+=======
+    // reset Goal Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Goal Metric";
+>>>>>>> ik-proto2
     }
 }
 
@@ -82,6 +91,7 @@ function empty_field(id) {
 function butt_drop_units(id) {
     // show/hide list
     document.getElementById(id + String(2)).classList.toggle("show");
+<<<<<<< HEAD
     // reset Enter Metric if empty
     if (document.getElementById("goals_metric").placeholder == "") {
         document.getElementById("goals_metric").placeholder = "Enter Metric";
@@ -92,6 +102,11 @@ function butt_drop_units(id) {
         if (openDropdown.classList.contains('show') && openDropdown.id != "goals_unit2") {
             openDropdown.classList.remove('show');
         }
+=======
+    // reset Goal Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Goal Metric";
+>>>>>>> ik-proto2
     }
     // comments inside 'Cycling'
     if (document.getElementById("goals_type").innerHTML == "Cycling") {
@@ -142,6 +157,7 @@ function butt_drop_units(id) {
         document.getElementById("km").style.color = 'rgb(175, 175, 175)';
         document.getElementById("min").style.color = 'rgb(175, 175, 175)';
         document.getElementById("hr").style.color = 'rgb(175, 175, 175)';
+<<<<<<< HEAD
     }
     if (document.getElementById("goals_type").innerHTML == "Competition Type") {
         document.getElementById("lbs").style.color = 'rgb(175, 175, 175)';
@@ -150,6 +166,8 @@ function butt_drop_units(id) {
         document.getElementById("km").style.color = 'rgb(175, 175, 175)';
         document.getElementById("min").style.color = 'rgb(175, 175, 175)';
         document.getElementById("hr").style.color = 'rgb(175, 175, 175)';
+=======
+>>>>>>> ik-proto2
     }
 }
 
@@ -194,6 +212,7 @@ function goalunit_pick(id) {
 function butt_dateM(id) {
     // show/hide list
     document.getElementById(id + String(2)).classList.toggle("show");
+<<<<<<< HEAD
     // reset Enter Metric if empty
     if (document.getElementById("goals_metric").placeholder == "") {
         document.getElementById("goals_metric").placeholder = "Enter Metric";
@@ -204,6 +223,11 @@ function butt_dateM(id) {
         if (openDropdown.classList.contains('show') && openDropdown.id != "goals_dueM2") {
             openDropdown.classList.remove('show');
         }
+=======
+    // reset Goal Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Goal Metric";
+>>>>>>> ik-proto2
     }
 }
 function dateM_pick(id) {
@@ -218,6 +242,7 @@ function dateM_pick(id) {
 function butt_dateD(id) {
     // show/hide list
     document.getElementById(id + String(2)).classList.toggle("show");
+<<<<<<< HEAD
     // reset Enter Metric if empty
     if (document.getElementById("goals_metric").placeholder == "") {
         document.getElementById("goals_metric").placeholder = "Enter Metric";
@@ -228,6 +253,11 @@ function butt_dateD(id) {
         if (openDropdown.classList.contains('show') && openDropdown.id != "goals_dueD2") {
             openDropdown.classList.remove('show');
         }
+=======
+    // reset Goal Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Goal Metric";
+>>>>>>> ik-proto2
     }
     // gray out by month
     if (document.getElementById("goals_dueM").innerHTML == "Jan") {
@@ -380,6 +410,7 @@ function dateD_pick(id) {
 function butt_dateY(id) {
     // show/hide list
     document.getElementById(id + String(2)).classList.toggle("show");
+<<<<<<< HEAD
     // reset Enter Metric if empty
     if (document.getElementById("goals_metric").placeholder == "") {
         document.getElementById("goals_metric").placeholder = "Enter Metric";
@@ -390,6 +421,11 @@ function butt_dateY(id) {
         if (openDropdown.classList.contains('show') && openDropdown.id != "goals_dueY2") {
             openDropdown.classList.remove('show');
         }
+=======
+    // reset Goal Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Goal Metric";
+>>>>>>> ik-proto2
     }
 }
 function dateY_pick(id) {
