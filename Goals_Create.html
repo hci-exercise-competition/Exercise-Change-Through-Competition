@@ -31,7 +31,7 @@
 
     <!-- TYPE -->
     <div class="dropdown">
-      <button id="goals_type" class="dropbtn" onclick="butt_drop_type()">Goal Type</button>
+      <button id="goals_type" class="dropbtn" onclick="toggle_drops(this.id)">Goal Type</button>
       <div id="goals_type2" class="dropdown-content">
         <a href="#" id="Cycling" onclick="goaltype_pick(this.id)">Cycling</a>
         <a href="#" id="Running" onclick="goaltype_pick(this.id)">Running</a>
@@ -57,7 +57,7 @@
     <div class="inline">
       <!-- UNITS -->
       <div class="dropdown" style="margin-left: 0px">
-        <button id="goals_unit" class="dropbtn" style="width:82px;" onclick="butt_drop_units(this.id)">Units</button>
+        <button id="goals_unit" class="dropbtn" style="width:82px;" onclick="butt_drop_units(this.id);toggle_drops(this.id)">Units</button>
         <div id="goals_unit2" class="dropdown-content" style="min-width: 82px">
           <a href="#" id="lbs" onclick="goalunit_pick(this.id)">lbs</a>
           <a href="#" id="kg" onclick="goalunit_pick(this.id)">kg</a>
@@ -71,7 +71,7 @@
 
     <!-- DUE DATE -->
     <div class="dropdown">
-      <button id="goals_dueM" class="dropbtn" style="width:75.93px;" onclick="butt_dateM(this.id)">MM</button>
+      <button id="goals_dueM" class="dropbtn" style="width:75.93px;" onclick="toggle_drops(this.id)">MM</button>
       <div id="goals_dueM2" class="dropdown-content" style="min-width:75.93px; max-height: 173px">
         <a href="#" id="m1" onclick="dateM_pick(this.id)">Jan</a>
         <a href="#" id="m2" onclick="dateM_pick(this.id)">Feb</a>
@@ -88,7 +88,7 @@
       </div>
     </div>
     <div class="dropdown" style="margin-left: 0px">
-      <button id="goals_dueD" class="dropbtn" style="width:75.93px;" onclick="butt_dateD(this.id)">DD</button>
+      <button id="goals_dueD" class="dropbtn" style="width:75.93px;" onclick="toggle_drops(this.id)">DD</button>
       <div id="goals_dueD2" class="dropdown-content" style="min-width:75.93px; max-height: 173px">
         <a href="#" id="d1" onclick="dateD_pick(this.id)">1</a>
         <a href="#" id="d2" onclick="dateD_pick(this.id)">2</a>
@@ -124,7 +124,7 @@
       </div>
     </div>
     <div class="dropdown" style="margin-left: 0px">
-      <button id="goals_dueY" class="dropbtn" style="width:75.93px;" onclick="butt_dateY(this.id)">YYYY</button>
+      <button id="goals_dueY" class="dropbtn" style="width:75.93px;" onclick="toggle_drops(this.id)">YYYY</button>
       <div id="goals_dueY2" class="dropdown-content" style="min-width:75.93px; max-height: 173px">
         <a href="#" id="y19" onclick="dateY_pick(this.id)">2019</a>
         <a href="#" id="y20" onclick="dateY_pick(this.id)">2020</a>
