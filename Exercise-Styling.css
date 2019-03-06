@@ -319,9 +319,10 @@ hr {
   text-align: center;
   font-size: 30px;
   padding: 8px;
-  width: 70%;
+  width: 60%;
   transition: all 0.4s;
 	cursor: pointer;
+	outline: none;
 	/* margin-top: 30px; */
 }
 
@@ -350,6 +351,7 @@ hr {
 	margin-left: 31.8px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	outline: none;
 }
 .dropbtn {
   background-color: #919191;
@@ -360,6 +362,7 @@ hr {
 	border: none;
 	border-radius: 7px;
 	cursor: pointer;
+	outline: none;
 }
 .dropbtn:hover, .dropbtn:focus {
 	background-color: #6c6c6c;
@@ -394,17 +397,17 @@ hr {
 	display: block;
 }
 
-
 .form2-styler input{
 	font-size: 20px;
   text-align: center;
   height:43px;
-  width:150px;
+  width:156.165; /* THIS NUMBER MUST MATCH WIDTH FOR <!-- METRIC --> */
   border: 0px solid #ffffff;
 	border-radius: 7px;
 	background-color: #919191;
 	margin-bottom: 1px;
 	color: #ffffff;
+	outline: none;
 }
 input::placeholder{
 	font-size: 20px; /* WHY IS THIS NOT WORKING??? -ik */
