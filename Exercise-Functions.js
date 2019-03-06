@@ -3,14 +3,46 @@
 DistList = ["mi", "km", "min", "hr"]
 LiftList = ["lbs", "kg", "min", "hr"]
 TimeList = ["min", "hr"]
-
-// FUNCTIONS:
-// Goals_Create.html requires text substitution
+Days1_28 = [
+    "1", "2", "3", "4", "5",
+    "6", "7", "8", "9", "10",
+    "11", "12", "13", "14", "15",
+    "16", "17", "18", "19", "20",
+    "21", "22", "23", "24", "25",
+    "26", "27", "28"]
+Days1_30 = [
+    "1", "2", "3", "4", "5",
+    "6", "7", "8", "9", "10",
+    "11", "12", "13", "14", "15",
+    "16", "17", "18", "19", "20",
+    "21", "22", "23", "24", "25",
+    "26", "27", "28", "29", "30"]
+Days1_31 = [
+    "1", "2", "3", "4", "5",
+    "6", "7", "8", "9", "10",
+    "11", "12", "13", "14", "15",
+    "16", "17", "18", "19", "20",
+    "21", "22", "23", "24", "25",
+    "26", "27", "28", "29", "30", "31"]
+Days28_ = ["29", "30", "31"]
+Days30_ = ["31"]
+var dropdowns = document.getElementsByClassName("dropdown-content");
 
 // SHOW/HIDE GOAL TYPES LIST
 function butt_drop_type() {
     // show/hide list
     document.getElementById("goals_type2").classList.toggle("show");
+    // reset Enter Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Enter Metric";
+    }
+    // close all else
+    for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show') && openDropdown.id != "goals_type2") {
+            openDropdown.classList.remove('show');
+        }
+    }
 }
 
 // GOAL TYPES
@@ -33,29 +65,47 @@ function goaltype_pick(id) {
     // document.getElementById("goals_dueY").innerHTML = "YYYY";
 }
 
-// GOAL METRIC
+// Enter Metric
 function empty_field(id) {
     // hide placeholder
     document.getElementById(id).placeholder = "";
+    // close all else
+    for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show') && openDropdown.id != "goals_metric") {
+            openDropdown.classList.remove('show');
+        }
+    }
 }
 
 // GOAL UNITS FIRST CLICK
 function butt_drop_units(id) {
     // show/hide list
     document.getElementById(id + String(2)).classList.toggle("show");
-
+    // reset Enter Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Enter Metric";
+    }
+    // close all else
+    for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show') && openDropdown.id != "goals_unit2") {
+            openDropdown.classList.remove('show');
+        }
+    }
+    // comments inside 'Cycling'
     if (document.getElementById("goals_type").innerHTML == "Cycling") {
         // change color of other units
-        document.getElementById("lbs").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("kg").style.color = 'rgb(200, 200, 200)';
+        document.getElementById("lbs").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("kg").style.color = 'rgb(175, 175, 175)';
         document.getElementById("mi").style.color = 'rgb(0, 0, 0)';
         document.getElementById("km").style.color = 'rgb(0, 0, 0)';
         document.getElementById("min").style.color = 'rgb(0, 0, 0)';
         document.getElementById("hr").style.color = 'rgb(0, 0, 0)';
     }
     if (document.getElementById("goals_type").innerHTML == "Running") {
-        document.getElementById("lbs").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("kg").style.color = 'rgb(200, 200, 200)';
+        document.getElementById("lbs").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("kg").style.color = 'rgb(175, 175, 175)';
         document.getElementById("mi").style.color = 'rgb(0, 0, 0)';
         document.getElementById("km").style.color = 'rgb(0, 0, 0)';
         document.getElementById("min").style.color = 'rgb(0, 0, 0)';
@@ -64,39 +114,48 @@ function butt_drop_units(id) {
     if (document.getElementById("goals_type").innerHTML == "Weight Lifting") {
         document.getElementById("lbs").style.color = 'rgb(0, 0, 0)';
         document.getElementById("kg").style.color = 'rgb(0, 0, 0)';
-        document.getElementById("mi").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("km").style.color = 'rgb(200, 200, 200)';
+        document.getElementById("mi").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("km").style.color = 'rgb(175, 175, 175)';
         document.getElementById("min").style.color = 'rgb(0, 0, 0)';
         document.getElementById("hr").style.color = 'rgb(0, 0, 0)';
     }
     if (document.getElementById("goals_type").innerHTML == "Swimming") {
-        document.getElementById("lbs").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("kg").style.color = 'rgb(200, 200, 200)';
+        document.getElementById("lbs").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("kg").style.color = 'rgb(175, 175, 175)';
         document.getElementById("mi").style.color = 'rgb(0, 0, 0)';
         document.getElementById("km").style.color = 'rgb(0, 0, 0)';
         document.getElementById("min").style.color = 'rgb(0, 0, 0)';
         document.getElementById("hr").style.color = 'rgb(0, 0, 0)';
     }
     if (document.getElementById("goals_type").innerHTML == "Frequency") {
-        document.getElementById("lbs").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("kg").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("mi").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("km").style.color = 'rgb(200, 200, 200)';
+        document.getElementById("lbs").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("kg").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("mi").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("km").style.color = 'rgb(175, 175, 175)';
         document.getElementById("min").style.color = 'rgb(0, 0, 0)';
         document.getElementById("hr").style.color = 'rgb(0, 0, 0)';
     }
     if (document.getElementById("goals_type").innerHTML == "Goal Type") {
-        document.getElementById("lbs").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("kg").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("mi").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("km").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("min").style.color = 'rgb(200, 200, 200)';
-        document.getElementById("hr").style.color = 'rgb(200, 200, 200)';
+        document.getElementById("lbs").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("kg").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("mi").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("km").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("min").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("hr").style.color = 'rgb(175, 175, 175)';
+    }
+    if (document.getElementById("goals_type").innerHTML == "Competition Type") {
+        document.getElementById("lbs").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("kg").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("mi").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("km").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("min").style.color = 'rgb(175, 175, 175)';
+        document.getElementById("hr").style.color = 'rgb(175, 175, 175)';
     }
 }
 
 // GOAL UNITS THEMSELVES
 function goalunit_pick(id) {
+    // comments inside
     if (document.getElementById("goals_type").innerHTML == "Cycling"
         && DistList.indexOf(id) >= 0) {
         // change name to id
@@ -129,38 +188,209 @@ function goalunit_pick(id) {
             document.getElementById(id).innerHTML;
         document.getElementById("goals_unit2").classList.toggle("show");
     }
-
-    // && id.indexOf(DistList) == True) {
 }
 
 // MONTH
 function butt_dateM(id) {
     // show/hide list
     document.getElementById(id + String(2)).classList.toggle("show");
+    // reset Enter Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Enter Metric";
+    }
+    // close all else
+    for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show') && openDropdown.id != "goals_dueM2") {
+            openDropdown.classList.remove('show');
+        }
+    }
 }
 function dateM_pick(id) {
     // change name to id
     document.getElementById("goals_dueM").innerHTML =
         document.getElementById(id).innerHTML;
     document.getElementById("goals_dueM2").classList.toggle("show");
+    document.getElementById("goals_dueD").innerHTML = "DD";
 }
 
 // DATE
 function butt_dateD(id) {
     // show/hide list
     document.getElementById(id + String(2)).classList.toggle("show");
+    // reset Enter Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Enter Metric";
+    }
+    // close all else
+    for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show') && openDropdown.id != "goals_dueD2") {
+            openDropdown.classList.remove('show');
+        }
+    }
+    // gray out by month
+    if (document.getElementById("goals_dueM").innerHTML == "Jan") {
+        for (i = 0; i < Days1_31.length; i++) {
+            document.getElementById("d" + String(Days1_31[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Feb") {
+        for (i = 0; i < Days28_.length; i++) {
+            document.getElementById("d" + String(Days28_[i])).style.color = 'rgb(175, 175, 175)';
+        }
+        for (i = 0; i < Days1_28.length + 1; i++) {
+            document.getElementById("d" + String(Days1_28[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Mar") {
+        for (i = 0; i < Days1_31.length; i++) {
+            document.getElementById("d" + String(Days1_31[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Apr") {
+        for (i = 0; i < Days30_.length; i++) {
+            document.getElementById("d" + String(Days30_[i])).style.color = 'rgb(175, 175, 175)';
+        }
+        for (i = 0; i < Days1_30.length + 1; i++) {
+            document.getElementById("d" + String(Days1_30[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "May") {
+        for (i = 0; i < Days1_31.length; i++) {
+            document.getElementById("d" + String(Days1_31[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Jun") {
+        for (i = 0; i < Days30_.length; i++) {
+            document.getElementById("d" + String(Days30_[i])).style.color = 'rgb(175, 175, 175)';
+        }
+        for (i = 0; i < Days1_30.length + 1; i++) {
+            document.getElementById("d" + String(Days1_30[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Jul") {
+        for (i = 0; i < Days1_31.length; i++) {
+            document.getElementById("d" + String(Days1_31[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Aug") {
+        for (i = 0; i < Days1_31.length; i++) {
+            document.getElementById("d" + String(Days1_31[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Sep") {
+        for (i = 0; i < Days30_.length; i++) {
+            document.getElementById("d" + String(Days30_[i])).style.color = 'rgb(175, 175, 175)';
+        }
+        for (i = 0; i < Days1_30.length + 1; i++) {
+            document.getElementById("d" + String(Days1_30[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Oct") {
+        for (i = 0; i < Days1_31.length; i++) {
+            document.getElementById("d" + String(Days1_31[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Nov") {
+        for (i = 0; i < Days30_.length; i++) {
+            document.getElementById("d" + String(Days30_[i])).style.color = 'rgb(175, 175, 175)';
+        }
+        for (i = 0; i < Days1_30.length + 1; i++) {
+            document.getElementById("d" + String(Days1_30[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Dec") {
+        for (i = 0; i < Days1_31.length; i++) {
+            document.getElementById("d" + String(Days1_31[i])).style.color = 'rgb(0, 0, 0)';
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "MM") {
+        for (i = 1; i <= 31; i++) {
+            document.getElementById("d" + String(i)).style.color = 'rgb(175, 175, 175)';
+        }
+    }
 }
+
 function dateD_pick(id) {
-    // change name to id
-    document.getElementById("goals_dueD").innerHTML =
-        document.getElementById(id).innerHTML;
-    document.getElementById("goals_dueD2").classList.toggle("show");
+    // comments inside Jan
+    if (document.getElementById("goals_dueM").innerHTML == "Jan") {
+        // change appropriate # to innerHTML
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        // hide list
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Feb") {
+        if (Days1_28.indexOf(id.substring(1)) >= 0) {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Mar") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Apr") {
+        if (id != "d31") {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "May") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Jun") {
+        if (id != "d31") {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Jul") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Aug") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Sep") {
+        if (id != "d31") {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Oct") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Nov") {
+        if (id != "d31") {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Dec") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
 }
 
 // YEAR
 function butt_dateY(id) {
     // show/hide list
     document.getElementById(id + String(2)).classList.toggle("show");
+    // reset Enter Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Enter Metric";
+    }
+    // close all else
+    for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show') && openDropdown.id != "goals_dueY2") {
+            openDropdown.classList.remove('show');
+        }
+    }
 }
 function dateY_pick(id) {
     // change name to id
@@ -169,16 +399,50 @@ function dateY_pick(id) {
     document.getElementById("goals_dueY2").classList.toggle("show");
 }
 
-// CAREFUL ERRORS!
+// CAREFUL ERRORS AND NOT WORKING!
 // SET GOAL
 function setGoal() {
     if (document.getElementById("goals_type").innerHTML != "Goal Type" &&
-        document.getElementById("goals_metric").placeholder != "Goal Metric" &&
+        document.getElementById("goals_metric").placeholder != "Enter Metric" &&
         document.getElementById("goals_unit").innerHTML != "Units" &&
         document.getElementById("goals_dueM").innerHTML != "MM" &&
         document.getElementById("goals_dueD").innerHTML != "DD" &&
         document.getElementById("goals_dueY").innerHTML.link != "YYYY") {
         // GO TO GOALS SITE
         // ??? how ???
+    }
+}
+
+// JOIN COMP
+function joinComp() {
+    alert("This feature is not yet active!\nTry creating a competition instead! :)")
+}
+
+// FRIENDS SEARCH CLICK
+function invFriends() {
+    // show/hide list
+    document.getElementById("inv_friends2").classList.toggle("show");
+    // reset Enter Metric if empty
+    if (document.getElementById("goals_metric").placeholder == "") {
+        document.getElementById("goals_metric").placeholder = "Enter Metric";
+    }
+    // close all else
+    for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show') && openDropdown.id != "inv_friends2") {
+            openDropdown.classList.remove('show');
+        }
+    }
+}
+
+// FRIEND PICK
+function friend_pick(id) {
+    // show/hide list
+    document.getElementById("inv_friends2").classList.toggle("show");
+    // change name
+    document.getElementById("inv_friends").innerHTML =
+        document.getElementById(id).innerHTML;
+    if (document.getElementById(id).innerHTML == "Chuck Norris") {
+        alert("WARNING! WARNING!\nSELECTION IS NOT ADVISED!\nPROCEED WITH CAUTION!")
     }
 }
