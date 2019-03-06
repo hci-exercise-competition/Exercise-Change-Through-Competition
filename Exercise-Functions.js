@@ -93,9 +93,6 @@ function toggle_drops(id) {
 
 // GOAL TYPES
 function goaltype_pick(id) {
-    // hide dropdown
-    document.getElementById("goals_type2").classList.toggle("show");
-    TYPE_TOGGLE = false
     // change name
     document.getElementById("goals_type").innerHTML =
         document.getElementById(id).innerHTML;
@@ -120,6 +117,7 @@ function empty_field(id) {
 
 // GOAL UNITS FIRST CLICK
 function butt_drop_units(id) {
+
     if (document.getElementById("goals_type").innerHTML == "Cycling") {
         // change color of other units
         document.getElementById("lbs").style.color = 'rgb(200, 200, 200)';
@@ -173,7 +171,6 @@ function butt_drop_units(id) {
 
 // GOAL UNITS THEMSELVES
 function goalunit_pick(id) {
-
     if (document.getElementById("goals_type").innerHTML == "Cycling"
         && DistList.indexOf(id) >= 0) {
         // change name to id
@@ -181,35 +178,30 @@ function goalunit_pick(id) {
             document.getElementById(id).innerHTML;
         // hide list
         document.getElementById("goals_unit2").classList.toggle("show");
-        UNIT_TOGGLE = false
     }
     if (document.getElementById("goals_type").innerHTML == "Running"
         && DistList.indexOf(id) >= 0) {
         document.getElementById("goals_unit").innerHTML =
             document.getElementById(id).innerHTML;
         document.getElementById("goals_unit2").classList.toggle("show");
-        UNIT_TOGGLE = false
     }
     if (document.getElementById("goals_type").innerHTML == "Weight Lifting"
         && LiftList.indexOf(id) >= 0) {
         document.getElementById("goals_unit").innerHTML =
             document.getElementById(id).innerHTML;
         document.getElementById("goals_unit2").classList.toggle("show");
-        UNIT_TOGGLE = false
     }
     if (document.getElementById("goals_type").innerHTML == "Swimming"
         && DistList.indexOf(id) >= 0) {
         document.getElementById("goals_unit").innerHTML =
             document.getElementById(id).innerHTML;
         document.getElementById("goals_unit2").classList.toggle("show");
-        UNIT_TOGGLE = false
     }
     if (document.getElementById("goals_type").innerHTML == "Frequency"
         && TimeList.indexOf(id) >= 0) {
         document.getElementById("goals_unit").innerHTML =
             document.getElementById(id).innerHTML;
         document.getElementById("goals_unit2").classList.toggle("show");
-        UNIT_TOGGLE = false
     }
 
     // && id.indexOf(DistList) == True) {
@@ -219,27 +211,24 @@ function goalunit_pick(id) {
 function dateM_pick(id) {
     // change name to id
     document.getElementById("goals_dueM").innerHTML =
-    document.getElementById(id).innerHTML;
+        document.getElementById(id).innerHTML;
     document.getElementById("goals_dueM2").classList.toggle("show");
-    MM_TOGGLE = false
 }
 
 // DATE
 function dateD_pick(id) {
     // change name to id
     document.getElementById("goals_dueD").innerHTML =
-    document.getElementById(id).innerHTML;
+        document.getElementById(id).innerHTML;
     document.getElementById("goals_dueD2").classList.toggle("show");
-    DD_TOGGLE = false
 }
 
 // YEAR
 function dateY_pick(id) {
     // change name to id
     document.getElementById("goals_dueY").innerHTML =
-    document.getElementById(id).innerHTML;
+        document.getElementById(id).innerHTML;
     document.getElementById("goals_dueY2").classList.toggle("show");
-    YY_TOGGLE = false
 }
 
 // CAREFUL ERRORS!
