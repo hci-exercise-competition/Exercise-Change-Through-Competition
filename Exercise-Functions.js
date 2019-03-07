@@ -56,13 +56,6 @@ function goaltype_pick(id) {
     // document.getElementById("goals_metric").placeholder = "Enter: Metric";
     // reset units
     document.getElementById("goals_unit").innerHTML = "Units";
-    // if (document.getElementById("goals_unit2").classList.display == "block") {
-    //     document.getElementById("goals_unit2").classList.toggle("show");
-    // }
-    // reset dates ** not necessary **
-    // document.getElementById("goals_dueM").innerHTML = "MM";
-    // document.getElementById("goals_dueD").innerHTML = "DD";
-    // document.getElementById("goals_dueY").innerHTML = "YYYY";
 }
 
 // Enter Metric
@@ -74,6 +67,25 @@ function empty_field(id) {
         var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show') && openDropdown.id != "goals_metric") {
             openDropdown.classList.remove('show');
+        }
+    }
+}
+
+// CHECK IF SET IS MATCHED AS TYPING
+// this covers Metric
+function checkFin() {
+    // SET!! Note: Each of these variables change as the form is filled out, so
+    // the variables need to be 're-captured' here, and thus re-stated each time
+    var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
+    var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
+    var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
+    if (unitsSet && ddSet && yySet) {
+        document.getElementById("id_setGoal").style.opacity = 1;
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
+            document.getElementById("id_setGoal").href = "Competitions.html";
         }
     }
 }
@@ -187,6 +199,20 @@ function goalunit_pick(id) {
         document.getElementById("goals_unit").innerHTML =
             document.getElementById(id).innerHTML;
         document.getElementById("goals_unit2").classList.toggle("show");
+    }
+    // SET!! Note: Each of these variables change as the form is filled out, so
+    // the variables need to be 're-captured' here, and thus re-stated each time
+    var metricSet = document.getElementById("goals_metric").value != "";
+    var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
+    var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
+    if (metricSet && ddSet && yySet) {
+        document.getElementById("id_setGoal").style.opacity = 1;
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
+            document.getElementById("id_setGoal").href = "Competitions.html";
+        }
     }
 }
 
@@ -374,6 +400,20 @@ function dateD_pick(id) {
         document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
         document.getElementById("goals_dueD2").classList.toggle("show");
     }
+    // SET!! Note: Each of these variables change as the form is filled out, so
+    // the variables need to be 're-captured' here, and thus re-stated each time
+    var metricSet = document.getElementById("goals_metric").value != "";
+    var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
+    var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
+    if (metricSet && unitsSet && yySet) {
+        document.getElementById("id_setGoal").style.opacity = 1;
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
+            document.getElementById("id_setGoal").href = "Competitions.html";
+        }
+    }
 }
 
 // YEAR
@@ -397,20 +437,24 @@ function dateY_pick(id) {
     document.getElementById("goals_dueY").innerHTML =
         document.getElementById(id).innerHTML;
     document.getElementById("goals_dueY2").classList.toggle("show");
+    // SET!! Note: Each of these variables change as the form is filled out, so
+    // the variables need to be 're-captured' here, and thus re-stated each time
+    var metricSet = document.getElementById("goals_metric").value != "";
+    var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
+    var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
+    if (metricSet && unitsSet && ddSet) {
+        document.getElementById("id_setGoal").style.opacity = 1;
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
+            document.getElementById("id_setGoal").href = "Competitions.html";
+        }
+    }
 }
 
-// CAREFUL ERRORS AND NOT WORKING!
-// SET GOAL
 function setGoal() {
-    if (document.getElementById("goals_type").innerHTML != "Goal Type" &&
-        document.getElementById("goals_metric").placeholder != "Enter Metric" &&
-        document.getElementById("goals_unit").innerHTML != "Units" &&
-        document.getElementById("goals_dueM").innerHTML != "MM" &&
-        document.getElementById("goals_dueD").innerHTML != "DD" &&
-        document.getElementById("goals_dueY").innerHTML.link != "YYYY") {
-        // GO TO GOALS SITE
-        // ??? how ???
-    }
+    // none
 }
 
 // JOIN COMP

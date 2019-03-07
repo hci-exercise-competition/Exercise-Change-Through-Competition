@@ -47,8 +47,7 @@
         <div class="dropdown">
           <div class="dropbtn" style="padding:0%; width:156.165px">
             <div class="form2-styler">
-              <!-- FONT SIZE IS OFF BUT DON'T KNOW WHY -ik -->
-              <input id="goals_metric" type="text" placeholder="Enter Metric" onclick="empty_field(this.id)" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+              <input id="goals_metric" type="text" placeholder="Enter Metric" onclick="empty_field(this.id)" onkeyup="this.value=this.value.replace(/[^\d]/,'')" onkeypress="checkFin()">
             </div>
           </div>
         </div>
@@ -145,8 +144,11 @@
 
     <!-- SET GOAL! -->
     <div class="goals-making-wrapper">
-      <a id="test" href="Goals.html">
-        <button class="button-goal3" onclick="setGoal()"><span>Set Goal!</span></button></a>
+      <a id="id_setGoal" href="#">
+        <button class="button-goal3" onclick="setGoal()">
+          <span id="goalvscomp">Set Goal!</span>
+        </button>
+      </a>
     </div>
 </body>
 

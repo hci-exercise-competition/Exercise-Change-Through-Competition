@@ -445,6 +445,10 @@ input:hover {
 	outline: none;
 }
 
+#id_setGoal {
+	opacity: .33;
+}
+
 /* ******************************************************************* */
 /* Competitions section */
 
