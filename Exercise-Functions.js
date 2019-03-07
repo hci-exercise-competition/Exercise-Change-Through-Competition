@@ -81,11 +81,12 @@ function checkFin() {
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
     if (unitsSet && ddSet && yySet) {
         document.getElementById("id_setGoal").style.opacity = 1;
+        document.getElementById("id_setComp").style.opacity = 1;
         if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
             document.getElementById("id_setGoal").href = "Goals.html";
         }
         if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-            document.getElementById("id_setGoal").href = "Competitions.html";
+            document.getElementById("id_setComp").href = "Competitions.html";
         }
     }
 }
@@ -207,11 +208,12 @@ function goalunit_pick(id) {
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
     if (metricSet && ddSet && yySet) {
         document.getElementById("id_setGoal").style.opacity = 1;
+        document.getElementById("id_setComp").style.opacity = 1;
         if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
             document.getElementById("id_setGoal").href = "Goals.html";
         }
         if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-            document.getElementById("id_setGoal").href = "Competitions.html";
+            document.getElementById("id_setComp").href = "Competitions.html";
         }
     }
 }
@@ -407,11 +409,12 @@ function dateD_pick(id) {
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
     if (metricSet && unitsSet && yySet) {
         document.getElementById("id_setGoal").style.opacity = 1;
+        document.getElementById("id_setComp").style.opacity = 1;
         if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
             document.getElementById("id_setGoal").href = "Goals.html";
         }
         if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-            document.getElementById("id_setGoal").href = "Competitions.html";
+            document.getElementById("id_setComp").href = "Competitions.html";
         }
     }
 }
@@ -444,11 +447,12 @@ function dateY_pick(id) {
     var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
     if (metricSet && unitsSet && ddSet) {
         document.getElementById("id_setGoal").style.opacity = 1;
+        document.getElementById("id_setComp").style.opacity = 1;
         if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
             document.getElementById("id_setGoal").href = "Goals.html";
         }
         if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-            document.getElementById("id_setGoal").href = "Competitions.html";
+            document.getElementById("id_setComp").href = "Competitions.html";
         }
     }
 }
@@ -486,7 +490,4 @@ function friend_pick(id) {
     // change name
     document.getElementById("inv_friends").innerHTML =
         document.getElementById(id).innerHTML;
-    if (document.getElementById(id).innerHTML == "Chuck Norris") {
-        alert("WARNING! WARNING!\nSELECTION IS NOT ADVISED!\nPROCEED WITH CAUTION!")
-    }
 }

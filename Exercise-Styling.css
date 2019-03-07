@@ -448,6 +448,9 @@ input:hover {
 #id_setGoal {
 	opacity: .33;
 }
+#id_setComp {
+	opacity: .33;
+}
 
 /* ******************************************************************* */
 /* Competitions section */
