@@ -76,16 +76,18 @@ function empty_field(id) {
 function checkFin() {
     // SET!! Note: Each of these variables change as the form is filled out, so
     // the variables need to be 're-captured' here, and thus re-stated each time
+    var metricSet = document.getElementById("goals_metric").value != "";
     var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
     var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
     if (unitsSet && ddSet && yySet) {
-        document.getElementById("id_setGoal").style.opacity = 1;
         if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
             document.getElementById("id_setGoal").href = "Goals.html";
         }
         if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-            document.getElementById("id_setGoal").href = "Competitions.html";
+            document.getElementById("id_setComp").style.opacity = 1;
+            document.getElementById("id_setComp").href = "Competitions.html";
         }
     }
 }
@@ -203,15 +205,17 @@ function goalunit_pick(id) {
     // SET!! Note: Each of these variables change as the form is filled out, so
     // the variables need to be 're-captured' here, and thus re-stated each time
     var metricSet = document.getElementById("goals_metric").value != "";
+    var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
     var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
     if (metricSet && ddSet && yySet) {
-        document.getElementById("id_setGoal").style.opacity = 1;
         if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
             document.getElementById("id_setGoal").href = "Goals.html";
         }
         if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-            document.getElementById("id_setGoal").href = "Competitions.html";
+            document.getElementById("id_setComp").style.opacity = 1;
+            document.getElementById("id_setComp").href = "Competitions.html";
         }
     }
 }
@@ -404,14 +408,16 @@ function dateD_pick(id) {
     // the variables need to be 're-captured' here, and thus re-stated each time
     var metricSet = document.getElementById("goals_metric").value != "";
     var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
+    var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
     if (metricSet && unitsSet && yySet) {
-        document.getElementById("id_setGoal").style.opacity = 1;
         if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
             document.getElementById("id_setGoal").href = "Goals.html";
         }
         if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-            document.getElementById("id_setGoal").href = "Competitions.html";
+            document.getElementById("id_setComp").style.opacity = 1;
+            document.getElementById("id_setComp").href = "Competitions.html";
         }
     }
 }
@@ -442,13 +448,15 @@ function dateY_pick(id) {
     var metricSet = document.getElementById("goals_metric").value != "";
     var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
     var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
+    var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
     if (metricSet && unitsSet && ddSet) {
-        document.getElementById("id_setGoal").style.opacity = 1;
         if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
             document.getElementById("id_setGoal").href = "Goals.html";
         }
         if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-            document.getElementById("id_setGoal").href = "Competitions.html";
+            document.getElementById("id_setComp").style.opacity = 1;
+            document.getElementById("id_setComp").href = "Competitions.html";
         }
     }
 }
@@ -486,7 +494,4 @@ function friend_pick(id) {
     // change name
     document.getElementById("inv_friends").innerHTML =
         document.getElementById(id).innerHTML;
-    if (document.getElementById(id).innerHTML == "Chuck Norris") {
-        alert("WARNING! WARNING!\nSELECTION IS NOT ADVISED!\nPROCEED WITH CAUTION!")
-    }
 }
