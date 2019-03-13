@@ -30,7 +30,7 @@ hr {
 }
 .button {
 	height: 25px;
-    width: 95px;
+    width: 70px;
   	background-color: #dc6938;
   	font-size: 14px;
     border: none;
@@ -145,6 +145,12 @@ hr {
 	margin-bottom: 10px;
 }
 
+.activity-name{
+	/* width: 50%; */ /* Don't need for now */
+	
+	color: #dc6938;
+}
+
 .activity-info{
 	/* width: 50%; */ /* Don't need for now */
 	font-size: 80%;
@@ -239,7 +245,7 @@ hr {
 }
 
 .time-bar>div {
-	background-color: #44a8d3;
+	background-color: #0000CD;
 	/* width: 50%; */
 	height: 15px;
 	border-radius: 13px;
@@ -257,8 +263,27 @@ hr {
 	margin-top: 1px;
 }
 
+.progress-bar-behind {
+	background-color: #000000;
+	border-radius: 13px;
+	padding: 3px;
+	width: 160px;
+	margin-left: 119px;
+	margin-top: 1px;
+}
+
 .progress-bar>div {
-	background-color: #dc6938;
+	background-color: #228B22;
+	/* width: 50%; */
+	height: 15px;
+	border-radius: 13px;
+	text-align: center;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.progress-bar-behind>div {
+	background-color: #D2691E;
 	/* width: 50%; */
 	height: 15px;
 	border-radius: 13px;
