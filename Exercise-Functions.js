@@ -81,16 +81,35 @@ function checkFin() {
     var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
     var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
-    var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
-    friendSet = !friendSet;
-    if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
-        if (unitsSet && ddSet && yySet) {
+    if (unitsSet && ddSet && yySet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
             document.getElementById("id_setGoal").style.opacity = 1;
             document.getElementById("id_setGoal").href = "Goals.html";
         }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
+            document.getElementById("id_setComp").style.opacity = 1;
+            document.getElementById("id_setComp").href = "Competitions.html";
+        }
     }
-    if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-        if (unitsSet && ddSet && yySet && friendSet) {
+}
+
+// CHECK IF SET IS MATCHED AS TYPING
+// this covers Metric
+function checkFin2() {
+    // SET!! Note: Each of these variables change as the form is filled out, so
+    // the variables need to be 're-captured' here, and thus re-stated each time
+    var metricSet = document.getElementById("goals_metric").value != "";
+    var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
+    var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
+    var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
+    var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
+    friendSet = !friendSet;
+    if (unitsSet && ddSet && yySet && friendSet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
             document.getElementById("id_setComp").style.opacity = 1;
             document.getElementById("id_setComp").href = "Competitions.html";
         }
@@ -213,16 +232,66 @@ function goalunit_pick(id) {
     var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
     var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
-    var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
-    friendSet = !friendSet;
-    if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
-        if (metricSet && ddSet && yySet) {
+    if (metricSet && ddSet && yySet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
             document.getElementById("id_setGoal").style.opacity = 1;
             document.getElementById("id_setGoal").href = "Goals.html";
         }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
+            document.getElementById("id_setComp").style.opacity = 1;
+            document.getElementById("id_setComp").href = "Competitions.html";
+        }
     }
-    if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-        if (metricSet && ddSet && yySet && friendSet) {
+}
+
+function goalunit_pick2(id) {
+    // comments inside
+    if (document.getElementById("goals_type").innerHTML == "Cycling"
+        && DistList.indexOf(id) >= 0) {
+        // change name to id
+        document.getElementById("goals_unit").innerHTML =
+            document.getElementById(id).innerHTML;
+        // hide list
+        document.getElementById("goals_unit2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_type").innerHTML == "Running"
+        && DistList.indexOf(id) >= 0) {
+        document.getElementById("goals_unit").innerHTML =
+            document.getElementById(id).innerHTML;
+        document.getElementById("goals_unit2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_type").innerHTML == "Weight Lifting"
+        && LiftList.indexOf(id) >= 0) {
+        document.getElementById("goals_unit").innerHTML =
+            document.getElementById(id).innerHTML;
+        document.getElementById("goals_unit2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_type").innerHTML == "Swimming"
+        && DistList.indexOf(id) >= 0) {
+        document.getElementById("goals_unit").innerHTML =
+            document.getElementById(id).innerHTML;
+        document.getElementById("goals_unit2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_type").innerHTML == "Frequency"
+        && TimeList.indexOf(id) >= 0) {
+        document.getElementById("goals_unit").innerHTML =
+            document.getElementById(id).innerHTML;
+        document.getElementById("goals_unit2").classList.toggle("show");
+    }
+    // SET!! Note: Each of these variables change as the form is filled out, so
+    // the variables need to be 're-captured' here, and thus re-stated each time
+    var metricSet = document.getElementById("goals_metric").value != "";
+    var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
+    var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
+    var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
+    var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
+    friendSet = !friendSet;
+    if (metricSet && ddSet && yySet && friendSet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
             document.getElementById("id_setComp").style.opacity = 1;
             document.getElementById("id_setComp").href = "Competitions.html";
         }
@@ -419,16 +488,94 @@ function dateD_pick(id) {
     var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
     var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
-    var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
-    friendSet = !friendSet;
-    if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
-        if (metricSet && unitsSet && yySet) {
+    if (metricSet && unitsSet && yySet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
             document.getElementById("id_setGoal").style.opacity = 1;
             document.getElementById("id_setGoal").href = "Goals.html";
         }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
+            document.getElementById("id_setComp").style.opacity = 1;
+            document.getElementById("id_setComp").href = "Competitions.html";
+        }
     }
-    if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-        if (metricSet && unitsSet && yySet && friendSet) {
+}
+
+function dateD_pick2(id) {
+    // comments inside Jan
+    if (document.getElementById("goals_dueM").innerHTML == "Jan") {
+        // change appropriate # to innerHTML
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        // hide list
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Feb") {
+        if (Days1_28.indexOf(id.substring(1)) >= 0) {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Mar") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Apr") {
+        if (id != "d31") {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "May") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Jun") {
+        if (id != "d31") {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Jul") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Aug") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Sep") {
+        if (id != "d31") {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Oct") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Nov") {
+        if (id != "d31") {
+            document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+            document.getElementById("goals_dueD2").classList.toggle("show");
+        }
+    }
+    if (document.getElementById("goals_dueM").innerHTML == "Dec") {
+        document.getElementById("goals_dueD").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("goals_dueD2").classList.toggle("show");
+    }
+    // SET!! Note: Each of these variables change as the form is filled out, so
+    // the variables need to be 're-captured' here, and thus re-stated each time
+    var metricSet = document.getElementById("goals_metric").value != "";
+    var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
+    var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
+    var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
+    var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
+    friendSet = !friendSet;
+    if (metricSet && unitsSet && yySet && friendSet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
             document.getElementById("id_setComp").style.opacity = 1;
             document.getElementById("id_setComp").href = "Competitions.html";
         }
@@ -462,16 +609,36 @@ function dateY_pick(id) {
     var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
     var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
     var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
-    var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
-    friendSet = !friendSet;
-    if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
-        if (metricSet && unitsSet && ddSet) {
+    if (metricSet && unitsSet && ddSet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
             document.getElementById("id_setGoal").style.opacity = 1;
             document.getElementById("id_setGoal").href = "Goals.html";
         }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
+            document.getElementById("id_setComp").style.opacity = 1;
+            document.getElementById("id_setComp").href = "Competitions.html";
+        }
     }
-    if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
-        if (metricSet && unitsSet && ddSet && friendSet) {
+}
+function dateY_pick2(id) {
+    // change name to id
+    document.getElementById("goals_dueY").innerHTML =
+        document.getElementById(id).innerHTML;
+    document.getElementById("goals_dueY2").classList.toggle("show");
+    // SET!! Note: Each of these variables change as the form is filled out, so
+    // the variables need to be 're-captured' here, and thus re-stated each time
+    var metricSet = document.getElementById("goals_metric").value != "";
+    var unitsSet = document.getElementById("goals_unit").innerHTML != "Units";
+    var ddSet = document.getElementById("goals_dueD").innerHTML != "DD";
+    var yySet = document.getElementById("goals_dueY").innerHTML != "YYYY";
+    var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
+    friendSet = !friendSet;
+    if (metricSet && unitsSet && ddSet && friendSet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
             document.getElementById("id_setComp").style.opacity = 1;
             document.getElementById("id_setComp").href = "Competitions.html";
         }
@@ -520,7 +687,13 @@ function friend_pick(id) {
     var friendSet = document.getElementById("inv_friends").innerHTML.includes('Search');
     friendSet = !friendSet;
     if (metricSet && unitsSet && ddSet && yySet) {
+        if (document.getElementById("goalvscomp").innerHTML == "Set Goal!") {
+            document.getElementById("id_setGoal").style.opacity = 1;
+            document.getElementById("id_setGoal").href = "Goals.html";
+        }
+        if (document.getElementById("goalvscomp").innerHTML == "Compete!") {
             document.getElementById("id_setComp").style.opacity = 1;
             document.getElementById("id_setComp").href = "Competitions.html";
+        }
     }
 }
