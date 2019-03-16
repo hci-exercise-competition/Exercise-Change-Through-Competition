@@ -201,6 +201,7 @@ hr {
 	float: right;
 	margin-right: 5%;
 	height: 27px;
+	cursor: pointer;
 }
 
 .goals-image {
